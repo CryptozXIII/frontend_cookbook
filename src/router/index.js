@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import Ingredients from '@/views/Ingredients'
 import Recipes from '@/views/Recipes'
+import Search from '@/views/Search'
 const routes = [
   {
     path: '/',
@@ -23,6 +24,11 @@ const routes = [
     path: '/recipes',
     name: 'Recipes',
     component: Recipes
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
   }
 ]
 

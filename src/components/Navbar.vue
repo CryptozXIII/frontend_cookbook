@@ -11,6 +11,7 @@
           <router-link class="nav-link" to="/about">About</router-link>
           <router-link class="nav-link" to="/ingredients">Ingredients</router-link>
           <router-link class="nav-link" to="recipes">Recipes</router-link>
+          <router-link class="nav-link" to="Search">Search</router-link>
         </ul>
       </div>
     </div>
@@ -19,7 +20,9 @@
 
 <script>
 export default {
-  name: 'NavbarComponent'
+  name: 'NavbarComponent',
+  components: {}
+
 }
 </script>
 
