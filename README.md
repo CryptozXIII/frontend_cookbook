@@ -1,3 +1,4 @@
+[![CI](https://github.com/CryptozXIII/frontend_cookbook/actions/workflows/test.yml/badge.svg)](https://github.com/CryptozXIII/frontend_cookbook/actions/workflows/test.yml)
 # frontend_cookbook
 
 ## Project setup
