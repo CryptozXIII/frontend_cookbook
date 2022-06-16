@@ -20,7 +20,8 @@
 
 <script>
 export default {
-  name: 'NavbarComponent',
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: 'Navbar',
   components: {}
 
 }
