@@ -6,12 +6,12 @@
         src="../assets/buffalomeatballs-03.webp" alt="" style="object-fit: cover; opacity: 1;">
     </div>
 
-    <section class="card-module--card--dCwUR">
-      <section class="index-module--container--nkg-l">
-        <h2 class="card-module--title--y0cTN"><span class="border-module--text--yNYGU">Vegane Buffalo Meatballs mit
+    <section>
+      <section>
+        <h2><span>Vegane Buffalo Meatballs mit
             Schnittlauch-Dip</span></h2>
-        <div class="card-module--infos--GVz7U">
-          <div itemprop="recipeYield">ca. 10 Bällchen</div>
+        <div>
+          <div>ca. 10 Bällchen</div>
           <div>45 Minuten</div>
         </div>
 
@@ -48,71 +48,71 @@
             Beispiel aufgeschnittene Gurken bevorzugen.</p>
         </div>
 
-        <div class="card-module--sections--tW0vd">
-          <div class="card-module--section--Ilnkv">
-            <h3 class="card-module--headline--X0z4Q">Zutaten</h3>
-            <div class="card-module--ingredients--QK-on">
-              <div class="renderer-module--text--uXtwy">
+        <div class="row">
+          <div class="col">
+            <h3>Zutaten</h3>
+            <div>
+              <div>
                 <h4>Für die Bällchen:</h4>
                 <ul>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">100 g weiße Bohnen aus der Dose
+                  <li>100 g weiße Bohnen aus der Dose
                     (abgetropft)</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 Zwiebel</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 Knoblauchzehe</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">50 g Walnüsse</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 TL Senf</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 EL Sojasoße</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 EL Tomatenmark</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 TL Rote-Bete-Saft (optional)
+                  <li>1 Zwiebel</li>
+                  <li>1 Knoblauchzehe</li>
+                  <li>50 g Walnüsse</li>
+                  <li>1 TL Senf</li>
+                  <li>1 EL Sojasoße</li>
+                  <li>1 EL Tomatenmark</li>
+                  <li>1 TL Rote-Bete-Saft (optional)
                   </li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 EL Kichererbsenmehl</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">75 g Seitanfix</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.5 TL edelsüßes Paprikapulver
+                  <li>1 EL Kichererbsenmehl</li>
+                  <li>75 g Seitanfix</li>
+                  <li>0.5 TL edelsüßes Paprikapulver
                   </li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.5 TL getrockneter Majoran
+                  <li>0.5 TL getrockneter Majoran
                   </li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Salz</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Pfeffer</li>
+                  <li>Salz</li>
+                  <li>Pfeffer</li>
                 </ul>
                 <h4>Für die Soße:</h4>
                 <ul>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">100 g Ketchup</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">2 EL Apfelessig</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 EL Ahornsirup</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 TL vegane Worcestershiresoße
+                  <li>100 g Ketchup</li>
+                  <li>2 EL Apfelessig</li>
+                  <li>1 EL Ahornsirup</li>
+                  <li>1 TL vegane Worcestershiresoße
                   </li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">1 Prise Cayennepfeffer</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.5 TL Knoblauchpulver</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.5 TL Zwiebelpulver</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">2 EL vegane Butter</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Tabasco nach Geschmack (oder
+                  <li>1 Prise Cayennepfeffer</li>
+                  <li>0.5 TL Knoblauchpulver</li>
+                  <li>0.5 TL Zwiebelpulver</li>
+                  <li>2 EL vegane Butter</li>
+                  <li>Tabasco nach Geschmack (oder
                     eine andere Hot Sauce)</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Salz</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Pfeffer</li>
+                  <li>Salz</li>
+                  <li>Pfeffer</li>
                 </ul>
                 <h4>Für den Schnittlauch-Dip:</h4>
                 <ul>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">200 g pflanzlicher Quark</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">150 g veganer Frischkäse</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">10 g Schnittlauch</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.5 TL Zwiebelpulver</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.25 TL Knoblauchpulver</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">0.5 Zitrone (Abrieb)</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Salz</li>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Pfeffer</li>
+                  <li>200 g pflanzlicher Quark</li>
+                  <li>150 g veganer Frischkäse</li>
+                  <li>10 g Schnittlauch</li>
+                  <li>0.5 TL Zwiebelpulver</li>
+                  <li>0.25 TL Knoblauchpulver</li>
+                  <li>0.5 Zitrone (Abrieb)</li>
+                  <li>Salz</li>
+                  <li>Pfeffer</li>
                 </ul>
                 <h4>Zum Servieren:</h4>
                 <ul>
-                  <li ordered="false" node="[object Object]" itemprop="recipeIngredient">Stangensellerie, Möhre oder
+                  <li>Stangensellerie, Möhre oder
                     Gurke</li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="card-module--section--Ilnkv">
-            <h3 class="card-module--headline--X0z4Q">Zubereitung</h3>
-            <div class="card-module--instructions--eTJjd" itemprop="recipeInstructions">
-              <div class="renderer-module--text--uXtwy">
+          <div class="col">
+            <h3>Zubereitung</h3>
+            <div>
+              <div>
                 <ol>
                   <li>
                     <p>Für die veganen Bällchen die weißen Bohnen, geschälte Zwiebel, Knoblauch und Walnüsse in einen
