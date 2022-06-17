@@ -48,8 +48,8 @@
             Beispiel aufgeschnittene Gurken bevorzugen.</p>
         </div>
 
-        <div class="row">
-          <div class="col">
+        <div class="row text-lg-start">
+          <div class="col-4">
             <h3>Zutaten</h3>
             <div>
               <div>
@@ -109,7 +109,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-8">
             <h3>Zubereitung</h3>
             <div>
               <div>
