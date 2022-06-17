@@ -1,5 +1,5 @@
 <template>
-  <h1> find recipes here</h1>
+  <h1> Hier sind deine Lieblingsrezepte </h1>
   <recipe-card></recipe-card>
   <recipe-card></recipe-card>
   <recipe-card></recipe-card>
@@ -12,7 +12,7 @@ import RecipeCard from '@/components/RecipeCard.vue'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Recipes',
+  name: 'MyRecipes',
   components: {
     'recipe-card': RecipeCard
   },
