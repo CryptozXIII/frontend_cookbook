@@ -28,56 +28,49 @@ export default {
   data () {
     return {
       recipes: [
-        {
-          id: 1,
-          title: 'test',
-          summary: 'dummary',
-          likes: 2,
-          image: 'buffalomeatballs-03.webp'
-        },
-        {
-          id: 2,
-          title: 'test2',
-          summary: 'dummary2',
-          likes: 22,
-          image: 'buffalomeatballs-03.webp'
-        },
-        {
-          id: 3,
-          title: 'test3',
-          summary: 'dummary3',
-          likes: 23,
-          image: 'buffalomeatballs-03.webp'
-        }
+        // {
+        //   id: 1,
+        //   title: 'test',
+        //   summary: 'dummary',
+        //   likes: 2,
+        //   image: 'buffalomeatballs-03.webp'
+        // },
+        // {
+        //   id: 2,
+        //   title: 'test2',
+        //   summary: 'dummary2',
+        //   likes: 22,
+        //   image: 'buffalomeatballs-03.webp'
+        // },
+        // {
+        //   id: 3,
+        //   title: 'test3',
+        //   summary: 'dummary3',
+        //   likes: 23,
+        //   image: 'buffalomeatballs-03.webp'
+        // }
       ]
     }
   },
   mounted () {
     const requestOptions = {
       method: 'GET',
-      // headers: {
-      //   'Access-Control-Allow-Origin': 'http://localhost:3000'
-      // },
       redirect: 'follow'
     }
 
-    fetch('http://localhost:8080/api/v1/recipe', requestOptions)
+    fetch('http://localhost:8080/recipeInformation/69', requestOptions)
       .then(response => response.json())
-      // .then(result => console.log(result))
+      .then(result => console.log(result))
       .then(result => result.forEach(recipe => {
-        this.recipe.push(recipe)
+        this.recipes.push(recipe)
       }))
       .catch(error => console.log('error', error))
-    // const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/recipeInformation/1'
-    // const requestOptions = {
-    //   method: 'GET',
-    //   redirect: 'follow'
-    // }
 
-    // fetch(endpoint, requestOptions)
+    // fetch('http://localhost:8080/api/v1/recipe', requestOptions)
     //   .then(response => response.json())
+    //   .then(result => console.log(result))
     //   .then(result => result.forEach(recipe => {
-    //     this.recipe.push(recipe)
+    //     this.recipes.push(recipe)
     //   }))
     //   .catch(error => console.log('error', error))
   }

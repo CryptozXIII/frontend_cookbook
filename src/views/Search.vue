@@ -13,8 +13,8 @@ export default {
   components: { Searchbar },
   props: {
     msg: String
-  }
-
+  },
+  data () {}
 }
 </script>
 
