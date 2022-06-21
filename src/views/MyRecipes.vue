@@ -1,9 +1,6 @@
 <template>
   <h1> Hier sind deine Lieblingsrezepte </h1>
   <recipe-card></recipe-card>
-  <recipe-card></recipe-card>
-  <recipe-card></recipe-card>
-  <recipe-card></recipe-card>
 </template>
 
 <script>
