@@ -15,6 +15,7 @@ export default {
       inputValue: ''
     }
   },
+  emits: ['onEmitIngredients'],
   methods: {
     emitIngredients () {
       this.$emit('onEmitIngredients', this.inputValue)

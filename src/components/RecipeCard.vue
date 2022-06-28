@@ -35,6 +35,12 @@ export default {
       recipes: []
     }
   },
+  watch: {
+    ingredients () {
+      console.log(this.ingredients)
+      this.updateCards()
+    }
+  },
   mounted () {
     const requestOptions = {
       method: 'GET',
@@ -54,29 +60,29 @@ export default {
       .catch((error) => console.log('error', error))
 
     console.log(this.recipes)
+  },
+  methods: {
+    updateCards () {
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      }
+      this.recipes = []
+      fetch(
+        'http://localhost:8080/recipeByIngredients/' + this.ingredients,
+        requestOptions
+      )
+        .then((response) => response.json())
+        .then((result) =>
+          result.forEach((recipe) => {
+            this.recipes.push(recipe)
+          })
+        )
+        .catch((error) => console.log('error', error))
+
+      console.log(this.recipes)
+    }
   }
-  // methods: {
-  //   updateCards () {
-  //     const requestOptions = {
-  //       method: 'GET',
-  //       redirect: 'follow'
-  //     }
-  //
-  //     fetch(
-  //       'http://localhost:8080/recipeByIngredients/' + this.ingredients,
-  //       requestOptions
-  //     )
-  //       .then((response) => response.json())
-  //       .then((result) =>
-  //         result.forEach((recipe) => {
-  //           this.recipes.push(recipe)
-  //         })
-  //       )
-  //       .catch((error) => console.log('error', error))
-  //
-  //     console.log(this.recipes)
-  //   }
-  // }
 }
 </script>
 
