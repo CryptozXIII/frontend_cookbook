@@ -64,12 +64,13 @@ export default {
   // },
   methods: {
     updateCards () {
+      const endpoint = process.env.VUE_APP_BACKEN_URL + '/recipeByIngredients/' + this.ingredients
       const requestOptions = {
         method: 'GET',
         redirect: 'follow'
       }
       this.recipes = []
-      fetch('http://localhost:8080/recipeByIngredients/' + this.ingredients, requestOptions)
+      fetch(endpoint, requestOptions)
         .then((response) => response.json())
         .then((result) => result.forEach((recipe) => {
           this.recipes.push(recipe)

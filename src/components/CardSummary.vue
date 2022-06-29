@@ -15,12 +15,13 @@ export default {
     }
   },
   mounted () {
+    const endpoint = process.env.VUE_APP_BACKEN_URL + '/recipeSummary/' + this.id
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
 
-    fetch('http://localhost:8080/recipeSummary/' + this.id, requestOptions)
+    fetch(endpoint, requestOptions)
       .then(response => response.json())
       .then(result => {
         for (const key in result) {
