@@ -64,7 +64,7 @@ export default {
   // },
   methods: {
     updateCards () {
-      const endpoint = process.env.VUE_APP_BACKEN_URL + '/recipeByIngredients/' + this.ingredients
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/recipeByIngredients/' + this.ingredients
       const requestOptions = {
         method: 'GET',
         redirect: 'follow'
