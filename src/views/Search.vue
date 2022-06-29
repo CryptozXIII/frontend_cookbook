@@ -11,7 +11,6 @@
 </template>
 
 <script>
-// import { ref } from 'vue'
 import Searchbar from '@/components/Searchbar'
 import RecipeCard from '@/components/RecipeCard'
 
@@ -25,7 +24,7 @@ export default {
   data () {
     return {
       results: [],
-      searchBarIngredients: 'mango'
+      searchBarIngredients: ''
     }
   },
   methods: {
@@ -33,13 +32,6 @@ export default {
       this.searchBarIngredients = message
     }
   }
-  // ,
-  // setup () {
-  //   const ingredientss = ref('')
-  //   return {
-  //     ingredientss
-  //   }
-  // }
 }
 </script>
 

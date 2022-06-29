@@ -1,0 +1,51 @@
+<template>
+  <div class="container">
+        <div>
+          <p class="summary" v-html="summary.summary"></p>
+        </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'RecipeInstructions',
+  data () {
+    return {
+      summary: {}
+    }
+  },
+  mounted () {
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+
+    fetch('http://localhost:8080/recipeSummary/' + this.id, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        for (const key in result) {
+          this.summary[key] = result[key]
+        }
+      })
+      .catch(error => console.log('error', error))
+
+    console.log(this.summary)
+  },
+  props: {
+    id: Number
+  }
+}
+</script>
+
+<style scoped>
+.summary {
+  font-size: medium;
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 6; /* number of lines to show */
+           line-clamp: 6;
+   -webkit-box-orient: vertical;
+}
+
+</style>

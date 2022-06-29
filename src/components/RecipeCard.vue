@@ -11,7 +11,8 @@
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="card-title" v-html="recipe.title"></h5>
-                <p class="card-text" style="font-size: small" v-html="recipe.summary"></p>
+                <!-- <p class="card-text" style="font-size: small" v-html="recipe.summary"></p> -->
+                <CardSummary :id="recipe.id"></CardSummary>
                 <p class="card-text">
                   <small class="text-muted">Likes: {{ recipe.likes }}</small>
                 </p>
@@ -25,6 +26,7 @@
 </template>
 
 <script>
+import CardSummary from '@/components/CardSummary.vue'
 export default {
   name: 'RecipesCard',
   props: {
@@ -32,7 +34,8 @@ export default {
   },
   data () {
     return {
-      recipes: []
+      recipes: [],
+      recipeId: ''
     }
   },
   watch: {
@@ -41,26 +44,24 @@ export default {
       this.updateCards()
     }
   },
-  mounted () {
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    }
-
-    fetch(
-      'http://localhost:8080/recipeByIngredients/' + this.ingredients,
-      requestOptions
-    )
-      .then((response) => response.json())
-      .then((result) =>
-        result.forEach((recipe) => {
-          this.recipes.push(recipe)
-        })
-      )
-      .catch((error) => console.log('error', error))
-
-    console.log(this.recipes)
-  },
+  // mounted () {
+  //   const requestOptions = {
+  //     method: 'GET',
+  //     redirect: 'follow'
+  //   }
+  //   fetch(
+  //     'http://localhost:8080/recipeByIngredients/' + this.ingredients,
+  //     requestOptions
+  //   )
+  //     .then((response) => response.json())
+  //     .then((result) =>
+  //       result.forEach((recipe) => {
+  //         this.recipes.push(recipe)
+  //       })
+  //     )
+  //     .catch((error) => console.log('error', error))
+  //   console.log(this.recipes)
+  // },
   methods: {
     updateCards () {
       const requestOptions = {
@@ -68,21 +69,15 @@ export default {
         redirect: 'follow'
       }
       this.recipes = []
-      fetch(
-        'http://localhost:8080/recipeByIngredients/' + this.ingredients,
-        requestOptions
-      )
+      fetch('http://localhost:8080/recipeByIngredients/' + this.ingredients, requestOptions)
         .then((response) => response.json())
-        .then((result) =>
-          result.forEach((recipe) => {
-            this.recipes.push(recipe)
-          })
-        )
+        .then((result) => result.forEach((recipe) => {
+          this.recipes.push(recipe)
+        }))
         .catch((error) => console.log('error', error))
-
-      console.log(this.recipes)
     }
-  }
+  },
+  components: { CardSummary }
 }
 </script>
 
