@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView'
 import RecipeOfTheDay from '@/views/RecipeOfTheDay'
 import MyRecipes from '@/views/MyRecipes'
 import Search from '@/views/Search'
+import Recipe from '@/views/Recipe'
 const routes = [
   {
     path: '/',
@@ -23,6 +24,11 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: Search
+  },
+  {
+    path: '/recipe',
+    name: 'Recipe',
+    component: Recipe
   }
 ]
 
