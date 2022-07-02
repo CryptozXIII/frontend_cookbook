@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <input v-model="inputValue" placeholder="Search Recipes by Ingredients" />
+    <input v-model="inputValue" @keyup.enter="emitIngredients" placeholder="Search Recipes by Ingredients" />
     <button type="submit" @click="emitIngredients">Submit</button>
   </div>
   <p>Ingredients: {{ inputValue }}</p>
