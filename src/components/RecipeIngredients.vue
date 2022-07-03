@@ -47,6 +47,20 @@ export default {
       .catch(error => console.log('error', error))
     console.log(this.instructions)
   }
+  //   const requestOptions = {
+  //     method: 'GET',
+  //     redirect: 'follow'
+  //   }
+
+  //   fetch('http://localhost:8080/recipeInformation/69', requestOptions)
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       for (const key in result) {
+  //         this.information[key] = result[key]
+  //       }
+  //     })
+  //     .catch(error => console.log('error', error))
+  // }
 }
 
 </script>
