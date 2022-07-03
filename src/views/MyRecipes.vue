@@ -18,24 +18,22 @@ export default {
   },
   data () {
     return {
-      recipes: [],
-      recipeId: '',
-      recipeLiked: Boolean
+      recipes: []
     }
   },
-  watch: {
-    ingredients () {
-      console.log(this.ingredients)
-      this.updateCards()
-    }
-  },
+  // watch: {
+  //   ingredients () {
+  //     console.log(this.ingredients)
+  //     this.updateCards()
+  //   }
+  // },
   mounted () {
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
 
-    fetch('http://localhost:8080/api/v1/recipe', requestOptions)
+    fetch('http://localhost:8080/api/v1/likedRecipes/true', requestOptions)
       .then(response => response.json())
       .then((result) => result.forEach((recipe) => {
         this.recipes.push(recipe)
@@ -43,32 +41,6 @@ export default {
       .catch(error => console.log('error', error))
   },
   methods: {
-    updateCards () {
-      const requestOptions = {
-        method: 'GET',
-        redirect: 'follow'
-      }
-
-      fetch('http://localhost:8080/api/v1/recipe', requestOptions)
-        .then(response => response.json())
-        .then((result) => result.forEach((recipe) => {
-          this.recipes.push(recipe)
-        }))
-        .catch(error => console.log('error', error))
-
-      this.removeRecipe()
-    },
-    removeRecipe () {
-      const requestOptions = {
-        method: 'DELETE',
-        redirect: 'follow'
-      }
-
-      fetch('http://localhost:8080/api/v1/recipe/56', requestOptions)
-        .then(response => response.json())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error))
-    }
   },
   components: { RecipesCardList }
 }
