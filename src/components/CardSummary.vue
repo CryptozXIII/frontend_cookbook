@@ -35,6 +35,12 @@ export default {
   props: {
     id: Number
   }
+  // emits: ['getSummary'],
+  // methods: {
+  //   sendSummary () {
+  //     this.$emit('getSummary', this.summary)
+  //   }
+  // }
 }
 </script>
 
