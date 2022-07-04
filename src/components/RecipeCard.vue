@@ -60,10 +60,10 @@ export default {
     //     redirect: 'follow'
     //   }
 
-    //   fetch('http://localhost:8080/api/v1/recipeByName/tofu', requestOptions)
-    //     .then(response => response.json())
-    //     .then(result => console.log(result))
-    //     .catch(error => console.log('error', error))
+      // fetch('http://localhost:8080/api/v1/recipeByName/tofu', requestOptions)
+      //   .then(response => response.json())
+      //   .then(result => console.log(result))
+      //   .catch(error => console.log('error', error))
     // },
     likeRecipe (recipe) {
 
@@ -89,8 +89,6 @@ export default {
 
       fetch(endpoint, requestOptions)
         .then(response => response.json())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error))
     }
   },
   components: {
