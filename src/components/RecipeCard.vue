@@ -103,6 +103,15 @@ export default {
 #like-button {
   font-size: 10px;
 }
+
+.card-title {
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1;  /*number of lines to show*/
+           line-clamp: 1;
+   -webkit-box-orient: vertical;
+}
 .card-text {
   font-size: small;
   overflow: hidden;
