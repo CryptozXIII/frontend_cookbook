@@ -72,6 +72,7 @@ export default {
     //     .catch(error => console.log('error', error))
     // },
     likeRecipe (recipe) {
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/recipe/' + recipe.id
       const myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json')
 
@@ -91,7 +92,7 @@ export default {
         redirect: 'follow'
       }
 
-      fetch('http://localhost:8080/api/v1/recipe/' + recipe.id, requestOptions)
+      fetch(endpoint, requestOptions)
         .then(response => response.json())
         .then(result => console.log(result))
         .catch(error => console.log('error', error))

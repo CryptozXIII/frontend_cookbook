@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="container">
     <div class="row" v-for="instruction in instructions" :key="instruction.name">
       <ul>
@@ -47,4 +47,4 @@ export default {
 
 <style scoped>
 
-</style>
+</style> -->

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div class="instruction" v-for="instruction in instructions" :key="instruction.name">
           <h4 class="instruction-name">{{ instruction.name }}</h4>
@@ -8,7 +8,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->
   <!-- <div class="container">
     <ul class="instruction" v-for="instruction in instructions" :key="instruction.name">
       <li>
@@ -23,7 +23,7 @@
       </li>
     </ul>
   </div> -->
-</template>
+<!-- </template>
 
 <script>
 export default {
@@ -46,8 +46,8 @@ export default {
       }))
       .catch(error => console.log('error', error))
     console.log(this.instructions)
-  }
-  //   const requestOptions = {
+  } -->
+  <!-- //   const requestOptions = {
   //     method: 'GET',
   //     redirect: 'follow'
   //   }
@@ -66,4 +66,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-</style>
+</style> -->

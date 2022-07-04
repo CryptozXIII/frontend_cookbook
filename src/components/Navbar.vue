@@ -12,7 +12,6 @@
           <router-link class="nav-link" to="/search">Search</router-link>
           <router-link class="nav-link" to="/my-recipes">My Recipes</router-link>
           <router-link class="nav-link" to="/recipe-of-the-day">Recipe of the Day</router-link>
-          <!-- <router-link class="nav-link" to="/about">About</router-link> -->
         </ul>
       </div>
     </div>

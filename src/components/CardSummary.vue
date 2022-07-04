@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="container">
         <div>
           <p class="summary" v-html="summary.summary"></p>
@@ -55,4 +55,4 @@ export default {
    -webkit-box-orient: vertical;
 }
 
-</style>
+</style> -->

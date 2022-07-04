@@ -49,37 +49,28 @@
 </template>
 
 <script>
-// import RecipeInstructions from '@/components/RecipeInstructions.vue'
-// import RecipeIngredients from '@/components/RecipeIngredients.vue'
-// import RecipeSummary from '@/components/RecipeSummary.vue'
-// import RecipeCard from '@compnents/RecipeCard.vue'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Recipe',
-  computed: {
-    setRecipeId () {
-      // console.log(parseInt(this.$route.params.id))
-      return parseInt(this.$route.params.id)
-    }
-
-  },
   data () {
     return {
       recipe: {},
-      recipeId: ''
+      recipeId: null
     }
   },
   methods: {
   },
   mounted () {
+    this.recipeId = this.$route.params.id
+    console.log(this.recipeId)
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/getRecipe/' + this.recipeId
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
     }
-    console.log(this.recipeId)
 
-    fetch('http://localhost:8080/api/v1/getRecipe/3', requestOptions)
+    fetch(endpoint, requestOptions)
       .then(response => response.json())
       .then(result => {
         for (const key in result) {

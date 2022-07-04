@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="container">
     <h2 class="recipe-name"><span>{{ summary.title }}</span></h2>
         <div>
@@ -37,4 +37,4 @@ export default {
 
 <style scoped>
 
-</style>
+</style> -->
