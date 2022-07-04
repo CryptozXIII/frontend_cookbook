@@ -225,7 +225,7 @@ export default {
   },
   computed: {
     orderSteps() {
-      return _.orderBy(this.recipe.steps, 'number', 'desc')
+      return _.orderBy(this.recipe.steps, 'number', 'asc')
     }
   },
   mounted () {
