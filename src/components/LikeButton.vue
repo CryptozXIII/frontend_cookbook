@@ -33,10 +33,10 @@ const props = defineProps ({
   color: #fee440;;
   background-color: #11ffee00;
 }
-/* .btn:active {
-  color: #fee440;
+.btn:active {
+  color: #001219;
   background-color: #11ffee00;
-} */
+}
 
 .btn {
   background-color: #11ffee00;
