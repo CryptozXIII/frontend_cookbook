@@ -11,7 +11,10 @@
               <h5 class="card-title" v-html="recipe.name" @click="goToRecipe(recipe.id)"></h5>
               <p class="card-text" v-html="recipe.summary"></p>
               <div class="row">
-                <div class="col-md-10"></div>
+                <div class="col-md-8"></div>
+                <div class="col-md-2">
+                  <p class="mt-2 liked-text" v-if="this.recipe.liked">Liked</p>
+                </div>
                 <div class="col-md-2">
                   <like-button :liked="this.recipe.liked" @click="likeRecipe(recipe)"></like-button>
                 </div>
@@ -129,5 +132,10 @@ export default {
 .card {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border: 0;
+}
+
+.liked-text {
+  font-size: small;
+  padding-left: 32px;
 }
 </style>

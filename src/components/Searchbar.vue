@@ -1,9 +1,9 @@
 <template>
   <div class="row">
-    <input v-model="inputValue" @keyup.enter="emitIngredients" placeholder="Search Recipes by Ingredients" />
-    <button type="submit" @click="emitIngredients">Submit</button>
+    <input v-model="inputValue" @keyup.enter="emitIngredients" placeholder="Search Recipes" />
+    <button type="button" class="btn btn-outline-secondary" @click="emitIngredients">Search</button>
   </div>
-  <p>Ingredients: {{ inputValue }}</p>
+  <!-- <p>Ingredients: {{ inputValue }}</p> -->
 </template>
 
 <script>
@@ -88,5 +88,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+button {
+  font-size: 13px;
+  width: 75px;
+  height: 30px;
 }
 </style>

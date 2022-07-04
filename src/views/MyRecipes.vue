@@ -1,5 +1,7 @@
 <template>
-  <h1> Hier sind deine Lieblingsrezepte </h1>
+  <br />
+  <h1> Favorite recipes </h1>
+  <br />
   <div class="container-fluid">
     <div class="row">
       <RecipesCardList :recipes="this.recipes"></RecipesCardList>

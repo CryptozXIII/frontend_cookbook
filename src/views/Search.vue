@@ -1,9 +1,11 @@
 <template>
     <div class="search">
+      <br />
         <div class="row">
-            <h1>look for recipes here</h1>
+            <!-- <h1>Find Recipes</h1> -->
             <searchbar @onEmitIngredients="messageSearchbar"></searchbar>
         </div>
+        <br />
         <div class="row">
             <RecipesCardList :recipes="this.recipes"></RecipesCardList>
         </div>
