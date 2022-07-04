@@ -8,7 +8,7 @@
     "type": "module"
   },
   "scripts": {
-
+    "clear_jest": "jest --clearCache",
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -30,6 +30,7 @@
     "@vue/test-utils": "^2.0.0-0",
     "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-jest": "^27.0.6",
-    "jest": "^27.0.5"
+    "jest": "^27.0.5",
+    "jest-fetch-mock": "^3.0.3"
   }
 }

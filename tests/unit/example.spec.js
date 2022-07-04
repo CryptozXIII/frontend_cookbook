@@ -1,5 +1,7 @@
-import { shallowMount } from '@vue/test-utils'
+import { mount, shallowMount } from '@vue/test-utils'
 import HelloWorld from '@/components/HelloWorld.vue'
+import Search from '@/views/Search'
+import Searchbar from '@/components/Searchbar'
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {
@@ -10,3 +12,5 @@ describe('HelloWorld.vue', () => {
     expect(wrapper.text()).toMatch(msg)
   })
 })
+
+
