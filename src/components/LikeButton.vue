@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { defineProps, reactiv } from 'vue'
+import { defineProps } from 'vue'
 
 const props = defineProps ({
   liked: {
