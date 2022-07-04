@@ -17,7 +17,8 @@ import { defineProps } from 'vue'
 const props = defineProps ({
   liked: {
     type: Boolean,
-    required: true
+    required: true,
+    default: false
     }
 })
 
