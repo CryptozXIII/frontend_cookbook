@@ -4,11 +4,11 @@
         <div class="card mx-auto mt-3" style="width: 60rem; height: 15rem">
           <div class="row g-0">
             <div class="col-md-5">
-              <img :alt="recipe.title" :src="recipe.image" class="img-fluid" />
+              <img :alt="recipe.title" :src="recipe.image" class="img-fluid"/>
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h5 class="card-title" v-html="recipe.name"></h5>
+                <h5 class="card-title" v-html="recipe.name" @click="goToRecipe(recipe.id)"></h5>
                 <p class="summary" style="font-size: small" v-html="recipe.summary"></p>
                   <div class="container">
                   <div class="row">
@@ -42,7 +42,6 @@ export default {
   data () {
     return {
       recipes: [],
-      recipeId: '',
       recipeLiked: null,
       title: '',
       image: '',
@@ -57,6 +56,9 @@ export default {
   //   }
   // },
   methods: {
+    goToRecipe (id) {
+      this.$router.push('/recipe/' + id)
+    },
     // updateCards () {
     //   // recipe By Name
     //   const requestOptions = {
@@ -110,6 +112,9 @@ export default {
    -webkit-line-clamp: 7;  /*number of lines to show*/
            line-clamp: 7;
    -webkit-box-orient: vertical;
+}
+.card-title:hover {
+  text-decoration: underline;
 }
 
 </style>
