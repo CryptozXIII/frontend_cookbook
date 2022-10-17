@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     loadMyRecipes() {
-      this.recipes = [];
       const endpoint =
         process.env.VUE_APP_BACKEND_BASE_URL + "/api/v1/likedRecipes/true";
       const requestOptions = {
@@ -39,13 +38,13 @@ export default {
 
       fetch(endpoint, requestOptions)
         .then((response) => response.json())
-        .then((result) =>
+        .then((result) => {
+          this.recipes = [];
           result.forEach((recipe) => {
             this.recipes.push(recipe);
-          })
-        )
+          });
+        })
         .catch((error) => console.log("error", error));
-      this.$forceUpdate();
     },
     likeRecipe(recipe) {
       const endpoint =
@@ -60,10 +59,11 @@ export default {
       };
 
       fetch(endpoint, requestOptions)
-        .then((response) => response.json())
+        .then((response) => response.text())
         .then((result) => console.log(result))
+        .then(() => this.loadMyRecipes())
         .catch((error) => console.log("error", error));
-      this.loadMyRecipes();
+      // this.loadMyRecipes();
     },
   },
   components: { RecipesCardList },
