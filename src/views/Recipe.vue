@@ -39,7 +39,7 @@
     <div class="row">
           <div>
             <ol>
-              <li v-for="step in recipe.steps" :key="step.number">
+              <li v-for="step in recipe.steps" :key="step.id">
                 <p>
                   {{ step.step }}
                 </p>

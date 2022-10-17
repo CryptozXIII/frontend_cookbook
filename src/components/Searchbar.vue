@@ -1,7 +1,17 @@
 <template>
   <div class="row">
-    <input v-model="inputValue" @keyup.enter="emitIngredients" placeholder="Search Recipes" />
-    <button type="button" class="btn btn-outline-secondary" @click="emitIngredients">Search</button>
+    <input
+      v-model="inputValue"
+      @keyup.enter="emitIngredients"
+      placeholder="Search Recipes"
+    />
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      @click="emitIngredients"
+    >
+      Search
+    </button>
   </div>
   <!-- <p>Ingredients: {{ inputValue }}</p> -->
 </template>
@@ -9,19 +19,19 @@
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Searchbar',
-  data () {
+  name: "Searchbar",
+  data() {
     return {
-      inputValue: ''
-    }
+      inputValue: "",
+    };
   },
-  emits: ['onEmitIngredients'],
+  emits: ["onEmitIngredients"],
   methods: {
-    emitIngredients () {
-      this.$emit('onEmitIngredients', this.inputValue)
-    }
-  }
-}
+    emitIngredients() {
+      this.$emit("onEmitIngredients", this.inputValue);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -45,7 +55,7 @@ button {
 
 body {
   background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .search {

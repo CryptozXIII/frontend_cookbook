@@ -1,21 +1,21 @@
 <template>
-<div class="row" v-for="recipe in recipes" :key="recipe.id">
-  <recipe-card :recipe="recipe"></recipe-card>
-</div>
+  <div class="row" v-for="recipe in recipes" :key="recipe.id">
+    <recipe-card :recipe="recipe"></recipe-card>
+  </div>
 </template>
 
 <script>
-import RecipeCard from '@/components/RecipeCard.vue'
+import RecipeCard from "@/components/RecipeCard.vue";
 export default {
-  name: 'RecipesCardList',
-  components: { RecipeCard },
+  components: {
+    RecipeCard,
+  },
   props: {
     recipes: {
       type: Array,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
-<style scoped>
-</style>
+<style scoped></style>

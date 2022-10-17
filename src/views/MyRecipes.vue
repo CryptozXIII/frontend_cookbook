@@ -1,6 +1,6 @@
 <template>
   <br />
-  <h1> Favorite recipes </h1>
+  <h1>Favorite recipes</h1>
   <br />
   <div class="container-fluid">
     <div class="row">
@@ -10,43 +10,64 @@
 </template>
 
 <script>
-import RecipesCardList from '@/components/RecipesCardList.vue'
+import { ref } from "vue";
+import RecipesCardList from "@/components/RecipesCardList.vue";
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'MyRecipes',
+  name: "MyRecipes",
   props: {
-    ingredients: String
+    ingredients: String,
   },
-  data () {
+  data() {
     return {
-      recipes: []
-    }
+      recipes: ref([]),
+    };
   },
-  // watch: {
-  //   ingredients () {
-  //     console.log(this.ingredients)
-  //     this.updateCards()
-  //   }
-  // },
-  mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/likedRecipes/true'
-    const requestOptions = {
-      method: 'GET',
-      redirect: 'follow'
-    }
-
-    fetch(endpoint, requestOptions)
-      .then(response => response.json())
-      .then((result) => result.forEach((recipe) => {
-        this.recipes.push(recipe)
-      }))
-      .catch(error => console.log('error', error))
+  mounted() {
+    this.loadMyRecipes();
   },
   methods: {
+    loadMyRecipes() {
+      this.recipes = [];
+      const endpoint =
+        process.env.VUE_APP_BACKEND_BASE_URL + "/api/v1/likedRecipes/true";
+      const requestOptions = {
+        method: "GET",
+        redirect: "follow",
+      };
+
+      fetch(endpoint, requestOptions)
+        .then((response) => response.json())
+        .then((result) =>
+          result.forEach((recipe) => {
+            this.recipes.push(recipe);
+          })
+        )
+        .catch((error) => console.log("error", error));
+      this.$forceUpdate();
+    },
+    likeRecipe(recipe) {
+      const endpoint =
+        process.env.VUE_APP_BACKEND_BASE_URL +
+        "/api/v1/like?id=" +
+        recipe.id +
+        "&liked=" +
+        !recipe.liked;
+      const requestOptions = {
+        method: "POST",
+        redirect: "follow",
+      };
+
+      fetch(endpoint, requestOptions)
+        .then((response) => response.json())
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+      this.loadMyRecipes();
+    },
   },
-  components: { RecipesCardList }
-}
+  components: { RecipesCardList },
+};
 </script>
 
 <style scoped>
