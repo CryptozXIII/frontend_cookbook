@@ -1,5 +1,68 @@
 <template>
   <div class="container">
+    <br />
+    <br />
+    <section>
+      <section>
+        <div class="container">
+          <h2 class="recipe-name">{{ recipe.name }}</h2>
+          <div>
+            <br />
+            <p class="summary" v-html="recipe.summary"></p>
+          </div>
+          <br />
+        </div>
+        <div class="row">
+          <img
+            width="1110"
+            height="701"
+            data-main-image=""
+            sizes="(min-width: 1110px) 1110px, 100vw"
+            decoding="async"
+            :src="recipe.image"
+            :alt="recipe.name"
+            style="object-fit: cover; opacity: 1"
+          />
+        </div>
+        <br />
+        <div class="row text-lg-start">
+          <div class="col-4">
+            <h3>Zutaten</h3>
+            <br />
+            <div class="instruction">
+              <ul v-for="ingredient in recipe.ingredients" :key="ingredient.id">
+                <li v-if="ingredient.amount == 0">
+                  {{ ingredient.unit }} {{ ingredient.name }}
+                </li>
+                <li v-else>
+                  {{ ingredient.amount }} {{ ingredient.unit }}
+                  {{ ingredient.name }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-8">
+            <h3>Zubereitung</h3>
+            <br />
+            <div class="container">
+              <div class="row">
+                <div>
+                  <ol>
+                    <li v-for="step in recipe.steps" :key="step.number">
+                      <p>
+                        {{ step.step }}
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+  <!-- <div class="container">
 
     <div class="row">
       <img width="1110" height="701" data-main-image="" sizes="(min-width: 1110px) 1110px, 100vw" decoding="async"
@@ -160,15 +223,45 @@
         </div>
       </section>
     </section>
-  </div>
-
+  </div> -->
 </template>
 
-<script>
-export default {
-  name: 'RecipeOfTheDay'
+<script setup>
+import { ref, onMounted } from "vue";
+const recipes = [];
+const recipe = ref({});
+
+onMounted(() => {
+  loadRecipes();
+});
+
+async function loadRecipes() {
+  const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + "/api/v1/recipe";
+  const requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
+
+  await fetch(endpoint, requestOptions)
+    .then((response) => response.json())
+    .then((result) => {
+      recipes.value = [];
+      result.forEach((rec) => {
+        recipes.push(rec);
+      });
+    })
+    .catch((error) => console.log("error", error));
+  randomRecipe();
+}
+
+function randomRecipe() {
+  const randomIndex = Math.floor(Math.random() * recipes.length);
+  recipe.value = recipes[randomIndex];
 }
 </script>
 
 <style scoped>
+/* .recipe_name {
+  text-underline-position: under;
+} */
 </style>
